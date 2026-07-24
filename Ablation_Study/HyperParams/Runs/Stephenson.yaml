@@ -1,0 +1,17 @@
+# Example hyperparameter grid config for hyperparam_sweep.py
+
+datasets:
+  - path: /Data/RNA_ADT/Stephenson/haniffa21.processed_healthy.h5ad
+    name: Stephenson
+    
+# parameter grid to sweep (each key maps to a list of values)
+params:
+  lr: [0.0001, 0.00005, 0.0002]
+  n_latent: [15, 20, 25]
+  # batch_size: [128, 256]
+  # dropout_rate: [0.0, 0.2]
+train_args:
+  # max_epochs: 200
+  # optional plan kwargs passed into TrainingPlan
+  # plan_kwargs: {}
+num_workers: 1
